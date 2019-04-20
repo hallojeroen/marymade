@@ -70,6 +70,8 @@
 		@include breakpoint('<=small') {
 			@include padding(3em, 2em, (0, 0, -1em, 0));
 
+			margin: 1em; // <---- spacer
+
 			p {
 				font-size: 1em;
 				letter-spacing: 0;
