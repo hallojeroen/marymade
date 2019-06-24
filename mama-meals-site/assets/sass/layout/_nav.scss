@@ -7,6 +7,7 @@
 /* Nav */
 
 	#nav {
+		display: none;
 		@include vendor('transition', (
 			'background-color #{_duration(transition)} ease',
 			'border-top-left-radius #{_duration(transition)} ease',
@@ -16,9 +17,14 @@
 		@include color-typography(invert);
 		position: absolute;
 		width: _size(inner);
-		max-width: calc(100% - #{_size(element-margin) * 2});
+		
+		// TODO: how to bind this to #wrapper?
+		max-width: calc(100% - 4em);
+
+		//max-width: calc(100% - #{_size(element-margin) * 2});
 		padding: 1em;
 		background-color: _palette(invert, bg-alt);
+		//background-color: greenyellow;
 		border-top-left-radius: _size(border-radius-main);
 		border-top-right-radius: _size(border-radius-main);
 		cursor: default;
@@ -66,7 +72,30 @@
 			}
 		}
 
+		&.page {
+			display: block;
+			padding: 0.5em 1em;
+
+			// has to be same size as #wrapper
+			max-width: calc(100% - 16em);
+
+			& + #main {
+				padding-top: 3.0em;
+			}
+			
+			ul {
+				li {
+					margin: 0 0.175em;
+
+					a {
+						font-size: 0.9em;
+					}
+				}
+			}
+		}
+
 		&.alt {
+			display: block;
 			position: fixed;
 			top: 0;
 			padding: 0.5em 1em;
@@ -86,11 +115,58 @@
 			}
 		}
 
+		
 		@include breakpoint('<=xsmall') {
-			display: none;
+			
+			background-color: aqua;
+			max-width: calc(100% - 2em);
+			padding: 0em 1em;
 
-			& + #main {
-				padding-top: 0;
+			&.alt {
+				padding: 0.5em 1em;
+			}
+			
+			&.page {
+				max-width: calc(100% - 2em);
+				
+				ul {
+					li {
+						margin: 0 0.175em;
+	
+						a {
+							font-size: 0.9em;
+						}
+					}
+				}
 			}
 		}
-	}
+
+		@include breakpoint('<=xxsmall') {
+			
+			background-color: rgb(19, 231, 0);
+			padding: 0.5em 1em;
+			max-width: 100%;
+			
+			&.page {
+				max-width: 100%;
+
+				ul {
+					li {
+						margin: 0 0.175em;
+	
+						a {
+							font-size: 0.9em;
+						}
+					}
+				}
+			}
+		}
+
+		// @include breakpoint('<=xsmall') {
+		// 	display: none;
+
+		// 	& + #main {
+		// 		padding-top: 0;
+		// 	}
+		// }
+	} 

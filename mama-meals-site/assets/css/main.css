@@ -96,10 +96,10 @@ html {
 
 body {
   background-color: #333333;
-  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #54b177 15%, #54b177 85%);
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #54b177 15%, #54b177 85%);
-  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #54b177 15%, #54b177 85%);
-  background-image: url("images/overlay.png"), linear-gradient(45deg, #54b177 15%, #54b177 85%);
+  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #a0a0a0 15%, #414141 85%);
+  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #a0a0a0 15%, #414141 85%);
+  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #a0a0a0 15%, #414141 85%);
+  background-image: url("images/overlay.png"), linear-gradient(45deg, #a0a0a0 15%, #414141 85%);
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   -moz-animation: none !important;
@@ -2602,6 +2602,7 @@ body.is-preload #header.alt .logo {
 
 /* Nav */
 #nav {
+  display: none;
   -moz-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
   -webkit-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
   -ms-transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
@@ -2678,7 +2679,22 @@ body.is-preload #header.alt .logo {
   background-color: #ffffff;
   box-shadow: none;
 }
+#nav.page {
+  display: block;
+  padding: 0.5em 1em;
+  max-width: calc(100% - 16em);
+}
+#nav.page + #main {
+  padding-top: 3em;
+}
+#nav.page ul li {
+  margin: 0 0.175em;
+}
+#nav.page ul li a {
+  font-size: 0.9em;
+}
 #nav.alt {
+  display: block;
   position: fixed;
   top: 0;
   padding: 0.5em 1em;
@@ -2695,10 +2711,37 @@ body.is-preload #header.alt .logo {
 }
 @media screen and (max-width: 480px) {
   #nav {
-    display: none;
+    background-color: aqua;
+    max-width: calc(100% - 2em);
+    padding: 0em 0em;
   }
-  #nav + #main {
-    padding-top: 0;
+  #nav.alt {
+    padding: 0em 0em;
+  }
+  #nav.page {
+    max-width: calc(100% - 2em);
+  }
+  #nav.page ul li {
+    background-color: aqua;
+    margin: 0 0.125em;
+  }
+  #nav.page ul li a {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 360px) {
+  #nav {
+    background-color: #13e700;
+    max-width: 100%;
+  }
+  #nav.page {
+    max-width: 100%;
+  }
+  #nav.page ul li {
+    margin: 0 0.175em;
+  }
+  #nav.page ul li a {
+    font-size: 0.9em;
   }
 }
 
@@ -3046,7 +3089,7 @@ body.is-preload #header.alt .logo {
   margin: 0 auto;
 }
 #wrapper.page {
-  max-width: calc(80% - 4em);
+  max-width: calc(100% - 16em);
 }
 @media screen and (max-width: 480px) {
   #wrapper {
