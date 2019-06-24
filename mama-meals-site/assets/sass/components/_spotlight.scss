@@ -25,9 +25,21 @@
 			}
 		}
 
+		&.left {
+			.image {
+				margin-right: 0em;
+			}
+		}
+
+		&.right {
+			.image {
+				margin-left: 0em;
+			}
+		}
+
 		.image {
 			display: inline-block;
-			margin-left: 4em;
+
 			padding: 0.65em;
 			border-radius: 100%;
 			border: solid 1px;
@@ -67,6 +79,7 @@
 			.image {
 				@include vendor('flex', '0 1 auto');
 				margin-left: 0;
+				margin-right: 0;
 				margin-bottom: _size(element-margin);
 			}
 		}

@@ -11,11 +11,35 @@
 		max-width: calc(100% - 4em);
 		margin: 0 auto;
 
+		&.page {
+			max-width: calc(80% - 4em);
+		}
+
+		@include breakpoint('<=large') {
+			// max-width: 100%;
+		}
+
+		@include breakpoint('<=medium') {
+			// max-width: 100%;
+		}
+
+		@include breakpoint('<=small') {
+			// max-width: 100%;
+		}
+
 		@include breakpoint('<=xsmall') {
 			max-width: calc(100% - 2em);
+			
+			&.page {
+				max-width: calc(100% - 2em);
+			}
 		}
 
 		@include breakpoint('<=xxsmall') {
 			max-width: 100%;
+			
+			&.page {
+				max-width: 100%;
+			}
 		}
 	}

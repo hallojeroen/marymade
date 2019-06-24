@@ -86,7 +86,7 @@
 			}
 		}
 
-		@include breakpoint('<=small') {
+		@include breakpoint('<=xsmall') {
 			display: none;
 
 			& + #main {
