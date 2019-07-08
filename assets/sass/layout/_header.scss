@@ -13,7 +13,10 @@
 
 		h1 {
 			margin: 0 0 (_size(element-margin) * 0.125) 0;
-		}
+			font-family: 'Slabo 27px', serif; 
+			font-size: 10px;
+			font-weight: 100;
+		} 
 
 		p {
 			font-size: 1.25em;

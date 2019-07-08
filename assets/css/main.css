@@ -119,7 +119,7 @@ body {
 }
 
 body, input, select, textarea {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "HelveticaNeueArabic", Helvetica, sans-serif;
   font-size: 17pt;
   font-weight: 300;
   line-height: 1.65;
@@ -188,7 +188,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-  font-family: "Amatic SC", cursive;
+  font-family: "Arial", sans-serif;
   font-weight: 700;
   font-size: 2.5em;
   line-height: 1.2;
@@ -2499,6 +2499,9 @@ table.alt tbody tr td {
 }
 #header h1 {
   margin: 0 0 0.25em 0;
+  font-family: "Slabo 27px", serif;
+  font-size: 10px;
+  font-weight: 100;
 }
 #header p {
   font-size: 1.25em;

@@ -19,9 +19,11 @@
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
+		//HelveticaNeueArabic, Lora, Georgia, TazuganeGothic, serif;
+		family:				('HelveticaNeueArabic', Helvetica, sans-serif),
+		//family:				('Source Sans Pro', Helvetica, sans-serif),
 		family-fixed:		('Courier New', monospace),
-		family-h1:			('Amatic SC', cursive),
+		family-h1:			('Arial', sans-serif), // TODO - 
 		weight:				300,
 		weight-bold:		400,
 		letter-spacing:		-0.025em
