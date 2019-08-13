@@ -119,7 +119,7 @@ body {
 }
 
 body, input, select, textarea {
-  font-family: "HelveticaNeueArabic", Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 17pt;
   font-weight: 300;
   line-height: 1.65;
@@ -188,7 +188,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-  font-family: "Arial", sans-serif;
+  font-family: "Lora", sans-serif;
   font-weight: 700;
   font-size: 2.5em;
   line-height: 1.2;
@@ -2407,10 +2407,10 @@ table.alt tbody tr td {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  -moz-align-items: top;
+  -webkit-align-items: top;
+  -ms-align-items: top;
+  align-items: top;
   margin: 0 0 2em 0;
 }
 .spotlight .content {
@@ -2433,9 +2433,9 @@ table.alt tbody tr td {
 }
 .spotlight .image {
   display: inline-block;
+  margin: 0.65em;
   padding: 0.65em;
   border-radius: 100%;
-  border: solid 1px;
 }
 .spotlight .image img {
   display: block;
@@ -2448,6 +2448,10 @@ table.alt tbody tr td {
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
     text-align: center;
   }
   .spotlight .content {
@@ -2456,6 +2460,9 @@ table.alt tbody tr td {
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     width: 100%;
+  }
+  .spotlight .content li {
+    list-style: none;
   }
   .spotlight .content header.major h2:after {
     margin-left: auto;
@@ -2495,12 +2502,12 @@ table.alt tbody tr td {
 #header {
   padding: 5em 5em 1em 5em;
   text-align: center;
-  margin: 0em;
+  margin: 6em 0em;
 }
 #header h1 {
   margin: 0 0 0.25em 0;
-  font-family: "Slabo 27px", serif;
-  font-size: 10px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2.25em;
   font-weight: 100;
 }
 #header p {
@@ -2511,8 +2518,11 @@ table.alt tbody tr td {
   padding: 6em 5em 3em 5em;
 }
 #header.alt h1 {
-  font-size: 6.25em;
-  line-height: 0.6;
+  font-size: 2.25em;
+  margin: 0;
+}
+#header.alt p {
+  font-size: 1.5em;
 }
 #header.alt > * {
   -moz-transition: opacity 2s ease;
@@ -2561,7 +2571,7 @@ table.alt tbody tr td {
 @media screen and (max-width: 736px) {
   #header {
     padding: 3em 2em 0.1em 2em;
-    margin: 0em;
+    margin: 4em 0em;
   }
   #header p {
     font-size: 1em;
@@ -2574,7 +2584,10 @@ table.alt tbody tr td {
     padding: 4em 2em 1em 2em;
   }
   #header.alt h1 {
-    font-size: 4.5em;
+    font-size: 1.5em;
+  }
+  #header.alt p {
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 480px) {
