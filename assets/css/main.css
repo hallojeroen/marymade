@@ -2502,26 +2502,29 @@ table.alt tbody tr td {
 #header {
   padding: 5em 5em 1em 5em;
   text-align: center;
-  margin: 6em 0em;
+  margin: 7em 0em;
 }
 #header h1 {
   margin: 0 0 0.25em 0;
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 2.25em;
+  font-family: "Bree Serif", serif;
+  font-size: 4.25em;
   font-weight: 100;
 }
 #header p {
+  font-family: "Bree Serif", serif;
   font-size: 1.25em;
   letter-spacing: -0.025em;
 }
 #header.alt {
-  padding: 6em 5em 3em 5em;
+  padding: 3em 5em 1em 5em;
 }
 #header.alt h1 {
-  font-size: 2.25em;
-  margin: 0;
+  font-size: 4.25em;
+  padding: 0em;
+  margin: 0em;
 }
 #header.alt p {
+  margin-top: -0.5em;
   font-size: 1.5em;
 }
 #header.alt > * {
@@ -2536,15 +2539,12 @@ table.alt tbody tr td {
   opacity: 1;
 }
 #header.alt .logo {
-  -moz-transition: opacity 1.25s ease, -moz-transform 0.5s ease;
-  -webkit-transition: opacity 1.25s ease, -webkit-transform 0.5s ease;
-  -ms-transition: opacity 1.25s ease, -ms-transform 0.5s ease;
-  transition: opacity 1.25s ease, transform 0.5s ease;
   -moz-transition-delay: 0s;
   -webkit-transition-delay: 0s;
   -ms-transition-delay: 0s;
   transition-delay: 0s;
   display: block;
+  text-align: right;
   margin: 0 0 1.5em 0;
 }
 #header.alt .logo img {
